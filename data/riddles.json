@@ -1,0 +1,17 @@
+[
+  {
+    "id": 1,
+    "question": "Tunda charaqlaydi, quyosh chiqsa yo‘qoladi. Bu nima?",
+    "answer": "yulduz"
+  },
+  {
+    "id": 2,
+    "question": "Tilim bor, lekin og‘zim yo‘q. Bu nima?",
+    "answer": "soat"
+  },
+  {
+    "id": 3,
+    "question": "Daraxtda turadi, lekin bargi yo‘q. Bu nima?",
+    "answer": "qush"
+  }
+]
