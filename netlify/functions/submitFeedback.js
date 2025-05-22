@@ -1,13 +1,16 @@
-exports.handler = async (event, context) => {
-  const data = JSON.parse(event.body);
-  const { name, message } = data;
+const riddles = require('../../data/riddles.json');
 
-  console.log("Yangi fikr:", name, message);
+exports.handler = async (event, context) => {
+  const { riddleId, userAnswer } = JSON.parse(event.body);
+  const riddle = riddles.find(r => r.id === riddleId);
+
+  const correct = riddle.answer.toLowerCase() === userAnswer.toLowerCase();
 
   return {
     statusCode: 200,
     body: JSON.stringify({
-      message: `Rahmat, ${name}! Fikringiz qabul qilindi.`
+      correct,
+      correctAnswer: riddle.answer
     })
   };
 };
